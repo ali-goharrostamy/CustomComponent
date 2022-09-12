@@ -1,0 +1,186 @@
+#customButton
+
+    flex           : 1
+    width          : 100%
+    cursor         : pointer
+    border         : none
+    display        : flex
+    padding        : 0.7rem 0rem
+    border-radius  : 0.5rem
+    justify-content: center
+
+    .icon 
+
+        margin         : 0rem 0.7rem
+        display        : flex
+        font-size      : 1.3rem
+        max-width      : 1rem
+        align-items    : center
+        justify-content: center
+        // overflow : hidden
+
+    .text 
+
+        width     : 100%
+        margin    : 0rem 0.5rem
+        overflow  : hidden
+        text-align: center
+
+        i
+            margin    : 0rem 0.5rem
+            font-size : 1.2rem
+            animation : spin 1s linear infinite
+
+    .loaderSpinner
+
+        overflow   : hidden
+        margin     : 0rem 0.5rem
+        display    : flex
+        font-size  : 1.5rem
+        animation  : spin 1s linear infinite
+        align-items: center
+
+
+.cursor
+
+    cursor: progress !important
+
+@keyframes spin 
+
+    0% 
+        transform: rotate(360deg)
+
+    100% 
+        transform: rotate(0deg)
+
+
+.primary
+
+    color           : #ffffff
+    background-color: #057afc
+
+    &:hover
+
+        background-color: #0061cf
+
+    &.outLine
+
+        background-color : transparent !important
+        outline          : 3.2px solid #057afc !important
+        color            :             #057afc !important
+
+        &:hover
+
+            background-color: #057afc !important
+            color           : #ffffff !important
+
+.secondary
+
+    color           : #ffffff
+    background-color: #6c747e
+
+    &:hover
+
+        background-color: #5a626b
+
+    &.outLine
+
+        background-color : transparent !important
+        outline          : 3.2px solid #6c747e !important
+        color            :             #6c747e !important
+
+        &:hover
+
+            background-color: #6c747e !important
+            color           : #ffffff !important
+
+.success
+
+    color           : #ffffff
+    background-color: #3bb62e
+
+    &:hover
+
+        background-color: #308e26
+
+    &.outLine
+
+        background-color : transparent !important
+        outline          : 3.2px solid #3bb62e !important
+        color            :             #3bb62e !important
+
+        &:hover
+
+            background-color: #3bb62e !important
+            color           : #ffffff !important
+
+.danger
+
+    color           : #ffffff
+    background-color: #dd4246
+
+    &:hover
+
+        background-color: #b82f34
+
+    &.outLine
+
+        background-color : transparent !important
+        outline          : 3.2px solid #dd4246 !important
+        color            :             #dd4246 !important
+
+        &:hover
+
+            background-color: #dd4246 !important
+            color           : #ffffff !important
+
+.warning
+
+    color           : #000000
+    background-color: #fbc230
+
+    &:hover
+
+        background-color: #d1a026
+
+    &.outLine
+
+        background-color : transparent !important
+        outline          : 3.2px solid #fbc230 !important
+        color            :             #fbc230 !important
+
+        &:hover
+
+            background-color: #fbc230 !important
+            color           : #000000 !important
+
+.disabel 
+
+    color     : #444444 
+    cursor    : not-allowed !important
+    background: #999
+
+    &:hover
+        
+        background: #999
+
+    &.outLine
+
+        background-color : transparent !important
+        outline          : 3.2px solid #999999 !important
+        color            :             #999999 !important
+
+        &:hover
+
+            background-color: #999999 !important
+            color           : #ffffff !important
+
+.noselect
+
+    user-select          : none  // Non-prefixed version, currently
+    -ms-user-select      : none  // Internet Explorer/Edge 
+    -moz-user-select     : none  // Old versions of Firefox 
+    -khtml-user-select   : none  // Konqueror HTML 
+    -webkit-user-select  : none  // Safari 
+    -webkit-touch-callout: none  // iOS Safari 
+                                 // supported by Chrome, Edge, Opera and Firefox 

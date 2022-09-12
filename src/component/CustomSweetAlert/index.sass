@@ -1,0 +1,112 @@
+#myCustomSweetAlert
+
+    width: 100%
+    height: 100vh
+    margin:0 auto
+    left: 0
+    right:0
+    // top: 40%
+    position: fixed  // position fixed for set in center when screen go on scroll
+    display: flex
+    justify-content: center
+    align-items: center
+    // display: none
+    z-index: 9999
+
+    animation : scale-in-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+    @keyframes scale-in-center 
+
+        0%
+            -webkit-transform: scale(0)
+            transform: scale(0)
+            opacity: 1
+        
+        100%
+            -webkit-transform: scale(1)
+            transform: scale(1)
+            opacity: 1
+
+    .modalContent
+
+        max-width: 35rem
+        overflow: hidden
+        margin: 1rem
+        background-color: #919191
+        padding: 1rem
+        border-radius: 0.3rem
+        color: black
+        text-align: center
+
+        .modalIcon
+
+            display: flex
+            margin: 2rem 0rem
+            font-size: 4rem
+            width: 100%
+            justify-content: center
+
+            animation: flip-vertical-right 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) 0.1s reverse both
+
+            @keyframes flip-vertical-right 
+                0% 
+                    -webkit-transform: rotateY(0)
+                    transform: rotateY(0)
+                
+                100% 
+                    -webkit-transform: rotateY(180deg)
+                    transform: rotateY(180deg)
+
+        .modalFunctions
+
+            display: flex
+            justify-content: center
+
+            .button
+
+                border-radius   : 0.3rem
+                margin: 0.2rem 
+                padding: 0.2em 0.5rem
+                cursor: pointer
+                user-select: none
+                -webkit-touch-callout: none
+                -webkit-user-select: none
+                -khtml-user-select: none
+                -moz-user-select: none
+                -ms-user-select: none
+
+            .submitButton:hover
+                filter: brightness(120%)
+
+            .cancelButton:hover
+                filter: brightness(120%)
+
+    // info
+    .fa-circle-info 
+        color: #238affaa
+
+    // error
+    .fa-circle-exclamation
+        color: #ff2d2d
+
+    // warning
+    .fa-triangle-exclamation
+        color: #ffc800
+
+    // success
+    .fa-circle-check
+        color: #37dd00
+
+    // loading
+    .fa-hourglass-end
+        font-size: 3.5rem
+        color: #292929
+
+        animation: rotate-180-cw 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s infinite both
+
+        @keyframes rotate-180-cw
+            0% 
+                transform: rotate(0)
+
+            100% 
+                transform: rotate(185deg)

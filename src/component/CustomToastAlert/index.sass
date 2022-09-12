@@ -1,0 +1,94 @@
+#myCustomToastAlert
+
+    .contentBody
+
+        display: block
+        position: absolute
+        padding: 0.5rem 
+
+        .contentBox
+
+            padding         : 0.7rem
+            z-index         : 900
+            overflow        : hidden
+            max-width       : 350px
+            min-width       : 250px
+            transition      : .3s ease
+            margin-bottom   : 0.5rem
+            border-radius   : 0.2rem 
+
+            animation: tilt-in-right-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+            @keyframes tilt-in-right-1
+
+                0% 
+                    transform: rotateX(-30deg) translateX(300px) skewX(30deg)
+                    opacity: 0
+                
+                100% 
+                    transform: rotateX(0deg) translateX(0) skewX(0deg)
+                    opacity: 1
+
+            &:hover
+                
+                box-shadow: 0 0 12px #333333
+                opacity: 1
+
+            i
+                cursor: pointer
+
+            .title
+
+                margin: 0rem
+
+            .discription
+
+                margin: 0rem
+
+        // STYLES
+        .info
+
+            color           : #1f1f1f
+            background-color: #0091ff
+
+        .success
+
+            color           : #fefefe
+            background-color: #3bc400
+
+        .warning
+
+            color           : #121212
+            background-color: #dda900
+
+        .danger
+
+            color           : #c9c9c9
+            background-color: #ff2222
+
+        .default 
+
+            color           : #ffffffaa
+            background-color: #333333aa
+
+
+    // POSITIONS
+    .topRight
+
+        top  : 0.5rem
+        right: 0.5rem
+
+    .topLeft
+
+        top : 0.5rem
+        left: 0.5rem
+
+    .bottomRight
+
+        right : 0.5rem
+        bottom: 0.5rem
+
+    .bottomLeft
+
+        left  : 0.5rem
+        bottom: 0.5rem

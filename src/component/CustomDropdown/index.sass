@@ -1,0 +1,95 @@
+
+// Font Family
+$fontFamily: Arial, Helvetica, sans-serif
+
+// Colors values
+$bg_DropDownButton : #ffffff
+$bg_DropDownContent: #181818
+$bg_TypeContent    : #111111
+$bg_TypeButton     : #1d1d1d
+$bg_TypeInput      : #2b2b2b
+
+$font_DropDowntext : #000000
+$font_DropDownMark : #252525
+$font_DropDownItem : #e5e5e5
+$font_DropDownLabel: #f6f6f6
+$font_typeButton   : #fafafa
+$font_typeInput    : #ffffff
+$font_typeitem     : #c8c8c8
+
+$hover_DropDownItem: #0c0c0c
+$hover_DeleteMark  : #ff0037
+
+// Custom Sass Scripts
+#customDropdown
+
+    width      : 100%
+    margin     : 0 auto
+    position   : relative
+    user-select: none
+    font-family: $fontFamily
+
+    .customDropdownButton
+
+        color           : $font_DropDownMark
+        cursor          : pointer
+        display         : flex
+        z-index         : 450
+        padding         : 1rem
+        position        : relative
+        align-items     : center
+        border-radius   : 1rem
+        justify-content : space-between
+        background-color: $bg_DropDownButton
+
+        .buttenText
+
+            color: $font_DropDowntext
+
+    .customDropdownContent
+
+        width           : 100%
+        z-index         : 400
+        position        : absolute
+        margin-top      : -1rem
+        padding-top     : 1rem
+        border-radius   : 0rem 0rem 1rem 1rem
+        background-color: $bg_DropDownContent
+
+        animation       : swing-in-top-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+        @keyframes swing-in-top-fwd
+
+            0%
+                -webkit-transform       : rotateX(-100deg)
+                transform               : rotateX(-100deg)
+                -webkit-transform-origin: top
+                transform-origin        : top
+                opacity                 : 0
+
+            100%
+                -webkit-transform       : rotateX(0deg)
+                -webkit-transform-origin: top
+                transform               : rotateX(0deg)
+                transform-origin        : top
+                opacity                 : 1
+
+
+        .dropdownItem
+
+            color    : $font_DropDownItem
+            cursor   : pointer
+            padding  : 1rem
+            transform: all 0.2s
+
+
+            &:hover
+                
+                background-color: $hover_DropDownItem
+
+                &:last-child
+                    border-radius: 0rem 0rem 1rem 1rem
+
+    .fa-xmark:hover
+
+        color: $hover_DeleteMark
