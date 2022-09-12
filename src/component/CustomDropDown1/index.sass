@@ -1,0 +1,80 @@
+.custom-dropDown-container
+
+    color   : #000
+    position: relative
+
+.dd-selection
+
+    width           : 100%
+    border          : 1px solid silver
+    cursor          : pointer
+    padding         : 14px 16px
+    position        : relative
+    font-size       : 13px
+    text-align      : center
+    font-weight     : 400
+    border-radius   : 5px
+    background-color: #fff
+
+    &::after
+
+        top          : 15px
+        right        : 15px
+        width        : 10px
+        height       : 10px
+        content      : ""
+        display      : block
+        position     : absolute
+        transform    : rotate(45deg)
+        transition   : 0.3s
+        border-right : 2px solid #A3B18A
+        border-bottom: 2px solid #A3B18A
+
+.visible::after
+
+    top      : 15px
+    transform: rotate(-135deg)
+
+.dropDown
+
+    top: 50px
+
+.dropRight
+
+    top : 0
+    left: 200px
+
+.dropTop
+
+    bottom: 50px
+
+.dropLeft
+
+    top  : 0
+    right: 200px
+
+.dd-itemHolder
+
+    width           : 90%
+    border          : 1px solid silver
+    z-index         : 100
+    position        : absolute
+    transform       : scale(0)
+    font-size       : 12px
+    transition      : all 0.5s ease-in-out
+    line-height     : 0.7rem
+    font-weight     : 500
+    border-radius   : 5px
+    transform-origin: top
+    background-color: #fff
+
+    div
+
+        cursor : pointer
+        padding: 10px 16px
+
+    &:hover
+
+        color           : #fff
+        border-radius   : 5px
+        background-color: #bc8e10
