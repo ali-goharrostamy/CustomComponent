@@ -25,7 +25,7 @@ type Props = {
     },
 } 
 
-const index = ({
+const CustomList = ({
 
     step     ,
     items    ,
@@ -106,4 +106,4 @@ const index = ({
 
 }
 
-export default index
+export default CustomList

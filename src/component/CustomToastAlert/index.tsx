@@ -58,7 +58,10 @@ const index = ({
                 "success" : type === "success",
                 "warning" : type === "warning",
 
-                "default" : type === undefined
+                "default" : type !== "info"    &&
+                            type !== "danger"  &&
+                            type !== "success" &&
+                            type !== "warning"
             }
         )
         return typeClass
